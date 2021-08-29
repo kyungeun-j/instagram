@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <main>
+            <article>
+                <div class="item1">
+                    <div class="back">
+                        <img id="imgList" src="./imgs/iphone_1.jpg" alt="">
+                        <script>
+                            const img = document.getElementById('imgList')
+                            const imgs = ["./imgs/iphone_1.jpg", "./imgs/iphone_2.jpg"]
+                            let imgIndex = 0;
+
+                            const changeImage = () => {
+                                img.setAttribute("src", imgs[imgIndex])
+                                imgIndex++;
+                                if (imgIndex >= imgs.length) {
+                                    imgIndex = 0;
+                                }
+                            };
+                            setInterval(changeImage, 2000);
+                        </script>
+                    </div>
+                </div>
+                <div class="item2">
+                    <div class="sign">
+                        <div class="logo"></div>
+                        <div>
+                            <form class="sign-in">
+                                <div class="sign-group">
+                                    <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+                                </div>
+                                <div class="sign-group">
+                                    <input type="password" placeholder="비밀번호">
+                                </div>
+                                <div class="sign-group">
+                                    <button class="log-btn">로그인</button>
+                                </div>
+                                <div class="sign-group">
+                                    <div class="hr-set"><div class="t-set">또는</div></div>
+                                </div>
+                                <div class="sign-group">
+                                    <button class="f-btn">
+                                        <span class="f-img"></span>
+                                        <span>Facebook으로 로그인</span>
+                                    </button>
+                                </div>
+                                <a class="f-pass" href="#">비밀번호를 잊으셨나요?</a>
+                            </form>
+                        </div>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p></p>
+                        <div>
+                            <a href=""></a><a href=""></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer></footer>
+    </section>
+</body>
+
+</html>
